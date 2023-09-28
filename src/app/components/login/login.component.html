@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="mt4 col-8 offset-2 p-3">
+    <div class="card">
+        <div class="card-header">
+            Login
+        </div>
+        <div class="card-body">
+            <form #frmlogin=ngForm (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="user" class="form-label">User</label>
+                  <input type="text" class="form-control" name="user" [(ngModel)]="form.user" required placeholder="User">
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required placeholder="Password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" [disabled]="!frmlogin.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

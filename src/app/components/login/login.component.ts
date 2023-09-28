@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  public form ={
+    user:null,
+    password:null
+  }
+
+  constructor(){
+
+  }
+
+  onSubmit(){
+    console.log(this.form);
+  }
+
 }
